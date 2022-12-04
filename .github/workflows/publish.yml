@@ -6,6 +6,9 @@ jobs:
   master_push_to_registry:
     name: Push Docker image to GitHub Packages as with Tag 'latest'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out the repo
