@@ -7,4 +7,4 @@ FROM alpine
 COPY --from=builder /workspace/go-pmtiles /bin/pmtiles
 WORKDIR /workspace
 EXPOSE 8080
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT /bin/sh
